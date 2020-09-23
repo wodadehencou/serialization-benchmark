@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "github.com/wodadehencou/serialization-benchmark/gogoprotobuf";
+
+package pb;
+
+message Simple {
+	string StrField = 1;
+	bytes Bytes1Field = 2;
+	bytes Bytes2Field = 3;
+	int64 Timestamp = 4;
+}
+
+message SimpleArr {
+	repeated Simple Simples = 1;
+}

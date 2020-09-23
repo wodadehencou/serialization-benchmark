@@ -1,0 +1,16 @@
+namespace fb;
+
+table Simple {
+    StrField:string;
+    Bytes1Field:[ubyte];
+    Bytes2Field:[ubyte];
+    Timestamp:int64;
+}
+
+table SimpleArr {
+    simples:[Simple];
+}
+
+rpc_service SimpleRPC {
+  Call(Simple):SimpleArr;
+}
